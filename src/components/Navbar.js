@@ -12,8 +12,8 @@ function Navbar() {
                 <Typography variant="h6" className={classes.title}>
                     BitFields
                 </Typography>
-                <Button color="primary" variant="contained" style={{marginRight: '5px'}}>Login</Button>
-                <Button color="secondary" variant="contained">Signup</Button>
+                <Button onClick={() => alert('Login')} color="primary" variant="contained" style={{marginRight: '5px'}}>Login</Button>
+                <Button onClick={() => alert('SignUp')} color="secondary" variant="contained">Signup</Button>
                 </Toolbar>
             </AppBar>
         </div>
