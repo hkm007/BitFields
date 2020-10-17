@@ -1,19 +1,20 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Jumbotron from './components/Jumbotron';
 import PostContent from './components/PostContent';
 import Footer from './components/Footer';
 import NewPost from './components/NewPost';
 
 function App() {
   return (
-    <React.Fragment>
+    <Router>
       <Navbar />
-      {/* <Jumbotron />
-      <PostContent /> */}
-      <NewPost />
+      <Switch>  
+        <Route path="/" exact component={PostContent} />
+        <Route path="/new" component={NewPost} />
+      </Switch>
       <Footer />
-    </React.Fragment>
+    </Router>
   );
 }
 

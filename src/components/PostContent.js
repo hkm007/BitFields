@@ -1,9 +1,11 @@
 import React from 'react';
+import Jumbotron from './Jumbotron';
 import './css/postcontent.css';
 
 function PostContent() {
     return (
         <React.Fragment>
+            <Jumbotron />
             <div className="container mb-4">
                 <div className="card col-lg-10 mx-auto my-4">
                     <div className="card-body">
