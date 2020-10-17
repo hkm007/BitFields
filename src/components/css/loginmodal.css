@@ -1,0 +1,11 @@
+.fa-sign-in {
+    font-size: 30px !important;
+}
+
+.fa-user, .fa-key {
+    font-size: 20px !important;
+}
+
+hr {
+    border-top: 1px solid white;
+}

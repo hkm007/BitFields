@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './css/newpost.css';
+import '../css/newpost.css';
 
 function NewPost() {
     const [title, setTitle] = useState("");

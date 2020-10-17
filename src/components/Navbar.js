@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './css/navbar.css';
 import { Link } from 'react-router-dom';
+import LoginModal from './modals/LoginModal';
 
 function Navbar() {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [openModal, setOpenModal] = useState(false);
+
+    const login = () => {
+        setOpenModal(true);
+    }
+
+    const logout = () => {
+        setIsLoggedIn(false);
+    }
+
     return (
         <React.Fragment>
             <nav className="navbar navbar-expand-lg navbar-dark">
@@ -15,14 +27,26 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto"></ul>
                         <div className="row my-2 my-lg-0">
-                            <span className="my-2 my-sm-0 mr-3 ml-2">
-                                <Link to="/new"><i className="fa fa-plus"></i></Link>
-                            </span>
-                            <button className="btn btn-danger my-2 my-sm-0" type="button" onClick={()=>alert('Login')}>Logout</button>
+                            { 
+                                (isLoggedIn) 
+                                ? 
+                                <>
+                                    <span className="my-2 my-sm-0 mr-3 ml-2">
+                                        <Link to="/new"><i className="fa fa-plus"></i></Link>
+                                    </span>
+                                    <button className="btn btn-danger my-2 my-sm-0" type="button" onClick={() => logout()}>Logout</button>
+                                </> 
+                                :
+                                <button className="btn btn-success my-2 my-sm-0" type="button" onClick={() => login()}>Login</button>
+                            }
                         </div>
                     </div>
                 </div>
             </nav>
+            <LoginModal open={setOpenModal} show={openModal} set={setIsLoggedIn} />
+
+            
+
         </React.Fragment>
     )
 } 

@@ -1,6 +1,6 @@
 import React from 'react';
+import '../css/postcontent.css'
 import Jumbotron from './Jumbotron';
-import './css/postcontent.css';
 
 function PostContent() {
     return (

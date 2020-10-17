@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import PostContent from './components/PostContent';
 import Footer from './components/Footer';
-import NewPost from './components/NewPost';
+import NewPost from './components/screens/NewPost';
+import PostContent from './components/screens/PostContent';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
