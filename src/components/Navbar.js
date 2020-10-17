@@ -15,7 +15,10 @@ function Navbar() {
                         <ul className="navbar-nav mr-auto">
 
                         </ul>
-                        <div className="my-2 my-lg-0">
+                        <div className="row my-2 my-lg-0">
+                            <span className="my-2 my-sm-0 mr-3 ml-2">
+                                <i onClick={() => alert('New')} className="fa fa-plus"></i>
+                            </span>
                             <button className="btn btn-success my-2 my-sm-0" type="button" onClick={()=>alert('Login')}>Login</button>
                         </div>
                     </div>
