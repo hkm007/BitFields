@@ -1,0 +1,15 @@
+.card {
+    border-bottom-left-radius: 50px 20px;
+    border-top-right-radius: 50px 20px;
+    border: solid;
+    box-shadow: 5px 10px #888888;
+}
+
+.card-title {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.card-text {
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+}
