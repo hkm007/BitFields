@@ -23,7 +23,7 @@ const Routing = () => {
       } else {
         history.push("/");
       }
-  }, [dispatch])
+  }, [dispatch, history])
 
   return (
     <Switch>  

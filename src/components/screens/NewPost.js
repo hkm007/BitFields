@@ -1,14 +1,25 @@
 import React, { useState } from 'react';
 import '../css/newpost.css';
 import Footer from '../Footer';
+import firebase from '../../firebase';
+import { toast } from 'react-toastify';
+import { useHistory } from 'react-router-dom';
 
 function NewPost() {
+    const history = useHistory();
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
 
     const savePost = (e) => {
         e.preventDefault();
-        alert(`${title}\n${content}`);
+        firebase.postData(title, content)
+        .then(() => {
+            toast.success("Posted Successfully");
+            history.push("/");
+        })
+        .catch((err) => {
+            toast.error("Something went wrong");
+        })
     }
 
     return (
@@ -22,7 +33,7 @@ function NewPost() {
                     <form onSubmit={(e) => savePost(e)}>
                         <div className="form-group">
                             <label htmlFor="title">Title</label>
-                            <input type="text" className="form-control" id="title" placeholder="Title" onChange={(e) => setTitle(e.target.value)} required />
+                            <input type="text" className="form-control" autoFocus id="title" placeholder="Title" onChange={(e) => setTitle(e.target.value)} required />
                         </div>
                         <div className="form-group">
                             <label htmlFor="content">Content</label>

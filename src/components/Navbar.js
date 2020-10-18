@@ -18,13 +18,13 @@ function Navbar() {
     const renderList = () => {
         if(state) {
             return [
-                <Link to="/new" className="my-2 my-sm-0 mr-3 ml-2"><i className="fa fa-plus"></i></Link>,
-                <Link className="btn btn-danger my-2 my-sm-0" type="button" onClick={() => logout()}>Logout</Link>
+                <Link to="/new" className="my-2 my-sm-0 mr-3 ml-2" key="3"><i className="fa fa-plus"></i></Link>,
+                <a href="#logout" className="btn btn-danger my-2 my-sm-0" type="button" onClick={() => logout()} key="2">Logout</a>
             ]
         }
         else {
             return [
-                <Link className="btn btn-success ml-3 my-2 my-sm-0" type="button" to="/login">Login</Link>
+                <Link className="btn btn-success ml-3 my-2 my-sm-0" type="button" to="/login" key="1">Login</Link>
             ]
         }
       }
