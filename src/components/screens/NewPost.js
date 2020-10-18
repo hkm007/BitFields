@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/newpost.css';
+import Footer from '../Footer';
 
 function NewPost() {
     const [title, setTitle] = useState("");
@@ -32,6 +33,7 @@ function NewPost() {
                     <hr />
                 </div>
             </div>
+            <Footer />
         </React.Fragment>
     )
 }

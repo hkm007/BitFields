@@ -1,6 +1,7 @@
 import React from 'react';
-import '../css/postcontent.css'
+import '../css/post.css'
 import Jumbotron from './Jumbotron';
+import Footer from '../Footer';
 
 function PostContent() {
     return (
@@ -29,6 +30,7 @@ function PostContent() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </React.Fragment>
     )
 }
