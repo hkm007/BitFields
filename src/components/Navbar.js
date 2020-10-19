@@ -19,7 +19,7 @@ function Navbar() {
         if(state) {
             return [
                 <Link to="/new" className="my-2 my-sm-0 mr-3 ml-2" key="3"><i className="fa fa-plus"></i></Link>,
-                <a href="#logout" className="btn btn-danger my-2 my-sm-0" type="button" onClick={() => logout()} key="2">Logout</a>
+                <button className="btn btn-danger my-2 my-sm-0" type="button" onClick={() => logout()} key="2">Logout</button>
             ]
         }
         else {

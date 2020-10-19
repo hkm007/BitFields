@@ -1,0 +1,13 @@
+.single-info {
+    font-size: 32px !important;
+}
+
+.single {
+    background-color: whitesmoke;
+}
+
+pre {
+    word-break: normal !important;
+    word-wrap: normal !important;
+    white-space: pre-wrap !important;
+}

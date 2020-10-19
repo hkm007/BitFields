@@ -5,9 +5,14 @@
     box-shadow: 5px 10px #888888;
 }
 
-.card-title {
+.title {
     font-size: 26px;
+    color: black !important;
     font-family: 'Roboto Mono', monospace;
+}
+
+.title:hover {
+    color: blueviolet !important;
 }
 
 .card-text {
@@ -18,4 +23,13 @@
 
 .fa-trash-o {
     font-size: 40px !important;
+}
+
+.author {
+    color: crimson;
+    font-style: oblique;
+}
+
+.all {
+    background-color: whitesmoke;
 }
